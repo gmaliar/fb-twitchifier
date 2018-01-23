@@ -1,0 +1,26 @@
+{
+  "name": "FB Twitchifier",
+  "version": "0.0.1",
+  "manifest_version": 2,
+  "description": "This extension was created to view ESL One Genting on Facebook live without the horrible Facebook UI",
+  "homepage_url": "https://github.com/gmaliar/fb-twitchifier",
+  "icons": {
+    "16": "icons/icon16.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  },
+  "default_locale": "en",
+  "permissions": [
+    "https://www.facebook.com/WatchESLOne/*"
+  ],
+  "content_scripts": [
+    {
+      "matches": [
+        "https://www.facebook.com/WatchESLOne/*"
+      ],
+      "js": [
+        "src/inject/inject.js"
+      ]
+    }
+  ]
+}
